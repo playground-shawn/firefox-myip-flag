@@ -1,0 +1,20 @@
+{
+  "categories": {
+    "firefox": [
+      "privacy-security"
+    ]
+  },
+  "summary": {
+    "en-US": "Shows the country flag of your current public IP in the toolbar. Hover to see the IP, country, city, VPN status and how long ago it was fetched."
+  },
+  "description": {
+    "en-US": "My IP Flag puts the flag of the country your public IP belongs to right in the toolbar, so you can tell at a glance where the web sees you.\n\nHover the icon to see:\n- Public IP address\n- Country and city\n- Whether the IP belongs to a known VPN, proxy or Tor exit (with the VPN provider when known)\n- How long ago it was fetched\n\nThe IP is checked every 20 seconds, when the network comes back online, and whenever you click the icon.\n\nPrivacy: the extension asks api.ipify.org for your public IP. Only when the IP changes does it ask ipwho.is for the country and city and proxycheck.io whether the IP is a VPN; results are cached on your device for 24 hours. These services see your IP address as part of the request, as any website does. The extension sends no other data."
+  },
+  "support_email": {
+    "en-US": "shawnux@gmail.com"
+  },
+  "version": {
+    "license": "MIT",
+    "approval_notes": "No build step and no minified code. background.js is the whole logic. Remote calls: https://api.ipify.org/?format=json (public IP, every 20 seconds), https://ipwho.is/<ip> (location) and https://proxycheck.io/v2/<ip>?vpn=1 (VPN check); the last two only when the IP changes, cached 24h and capped per day to respect the free quotas."
+  }
+}
