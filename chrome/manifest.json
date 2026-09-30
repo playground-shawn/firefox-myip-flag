@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "My IP Flag",
+  "version": "1.0",
+  "description": "Shows the country flag of your current public IP in the toolbar. Hover for IP, country, city, VPN status and when it was fetched.",
+  "author": "Shawn Lim",
+  "icons": { "16": "icon-16.png", "32": "icon-32.png", "48": "icon-48.png", "128": "icon-128.png" },
+  "permissions": ["storage", "alarms", "offscreen"],
+  "host_permissions": ["https://api.ipify.org/*", "https://ipwho.is/*", "https://proxycheck.io/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Loading...",
+    "default_icon": { "16": "icon-16.png", "32": "icon-32.png" }
+  }
+}
